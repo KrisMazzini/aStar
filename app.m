@@ -7,8 +7,8 @@ map = ones(lines, cols);
 plotMap(lines, cols);
 
 map = addObstacles(map);
-map = addInitialPosition(xInit, yInit, map);
-map = addFinalPosition(xFinal, yFinal, map);
+[xInit, yInit, map] = addInitialPosition(map);
+[xGoal, yGoal, map] = addFinalPosition(map);
 
 xCurr = xInit;
 yCurr = yInit;
@@ -20,7 +20,7 @@ init2currCost = cost(xInit, yInit, xCurr, yCurr);
 curr2neighCost = cost(xCurr, yCurr, xNeigh, yNeigh);
 
 gCost = init2currCost + curr2neighCost;
-hCost = cost(xFinal, yFinal, xNeigh, yNeigh);
+hCost = cost(xGoal, yGoal, xNeigh, yNeigh);
 
 minFunction = gCost + hCost;
 
