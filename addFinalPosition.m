@@ -1,4 +1,4 @@
-function [map] = addFinalPosition(map)
+function [xGoal, yGoal, map] = addFinalPosition(map)
 
     xlabel("Choose robot final position with left mouse button");
 

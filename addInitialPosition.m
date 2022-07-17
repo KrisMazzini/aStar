@@ -1,4 +1,4 @@
-function [map] = addInitialPosition(map)
+function [xInit, yInit, map] = addInitialPosition(map)
 
     xlabel("Choose robot initial position with left mouse button");
 
