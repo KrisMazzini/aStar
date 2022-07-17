@@ -5,3 +5,5 @@ cols = 8;
 
 map = ones(lines, cols);
 plotMap(lines, cols);
+
+map = addObstacles(map);
