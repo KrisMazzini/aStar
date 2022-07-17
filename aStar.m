@@ -7,3 +7,5 @@ map = ones(lines, cols);
 plotMap(lines, cols);
 
 map = addObstacles(map);
+map = addInitialPosition(map);
+map = addFinalPosition(map);

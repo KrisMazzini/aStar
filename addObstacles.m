@@ -16,7 +16,7 @@ function map = addObstacles(map)
         [xObstacle, yObstacle, clickValue] = ginput(1);
         xObstacle = round(xObstacle);
         yObstacle = round(yObstacle);
-        map(xObstacle, yObstacle) = -1;
+        map(yObstacle, xObstacle) = -1;
         plot(xObstacle, yObstacle, 'sk', 'MarkerSize', 20, 'LineWidth', 4);
         plot(xObstacle, yObstacle, '*k', 'MarkerSize', 20, 'LineWidth', 4);
     end
